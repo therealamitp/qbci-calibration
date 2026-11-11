@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qbci-calibration"
+version = "0.1.0"
+description = "Chronological cross-session EEG calibration with falsifiable quantum feature controls"
+requires-python = ">=3.10"
+license = {text = "PolyForm-Noncommercial-1.0.0"}
+authors = [{name = "Amit Prakash"}]
+dependencies = ["numpy>=1.24,<3", "scipy>=1.10,<2", "scikit-learn>=1.3,<2"]
+
+[project.optional-dependencies]
+eeg = ["moabb>=1.2,<2", "mne>=1.6,<2"]
+deep = ["torch>=2.2,<3"]
+dev = ["pytest>=7,<10", "matplotlib>=3.7,<4"]
+
+[project.scripts]
+qbci = "qbci.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

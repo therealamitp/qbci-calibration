@@ -1,0 +1,16 @@
+{
+  "source_steps": 25,
+  "target_steps": 15,
+  "C": 1.0,
+  "gamma_multiplier": 1.0,
+  "anchor": 0.1,
+  "target_mass": 0.5,
+  "replay": 32,
+  "dimensions": 4,
+  "qubits": 4,
+  "blocks": 2,
+  "seed": 0,
+  "shots": null,
+  "source_epochs": 100,
+  "target_epochs": 20
+}

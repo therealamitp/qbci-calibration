@@ -1,0 +1,72 @@
+{
+  "scope": "SOFTWARE VERIFICATION ONLY; NO EMPIRICAL EEG RESULTS",
+  "date_utc": "2026-11-10T01:45:14.446189+00:00",
+  "python": "3.8.10",
+  "unit_tests": {
+    "command": "PYTHONPATH=src python3 -m unittest discover -s tests -v",
+    "passed": 46,
+    "failed": 0,
+    "skipped": 0,
+    "elapsed_seconds": 293.333
+  },
+  "default_synthetic_run": {
+    "participants": 3,
+    "methods": 20,
+    "budgets": [
+      0,
+      4,
+      8,
+      16,
+      32
+    ],
+    "score_rows": 300
+  },
+  "shot_runs": [
+    {
+      "shots": "128",
+      "rows": 20,
+      "methods": [
+        "fidelity_classifier",
+        "fidelity_subset",
+        "projected_classifier",
+        "projected_subset"
+      ]
+    },
+    {
+      "shots": "2048",
+      "rows": 20,
+      "methods": [
+        "fidelity_classifier",
+        "fidelity_subset",
+        "projected_classifier",
+        "projected_subset"
+      ]
+    },
+    {
+      "shots": "512",
+      "rows": 20,
+      "methods": [
+        "fidelity_classifier",
+        "fidelity_subset",
+        "projected_classifier",
+        "projected_subset"
+      ]
+    },
+    {
+      "shots": "None",
+      "rows": 20,
+      "methods": [
+        "fidelity_classifier",
+        "fidelity_subset",
+        "projected_classifier",
+        "projected_subset"
+      ]
+    }
+  ],
+  "sequential_example": {
+    "predictions": 64,
+    "labels_revealed": 16
+  },
+  "raw_eeg_experiments_executed": false,
+  "hardware_experiments_executed": false
+}
